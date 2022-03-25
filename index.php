@@ -16,6 +16,8 @@
     
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
    
 </head>
 
@@ -29,16 +31,17 @@
     <h1>Solution of the Problem!</h1>   
                     
                     <div align="right">
-                        <button type="button" id="add_button" data-toggle="modal" data-target="#userModal" class="btn btn-success btn-lg">Add Solution</button>
+                        <button type="button" id="add_button" data-toggle="modal" data-target="#userModal" class="btn btn-success btn-lg"> <i class="fa fa-bars">&nbsp;</i>  Add Solution</button>                       
                     </div> <br> <br>
-
+                 
                 <table id="course_table" class="table table-striped">  
                     <thead bgcolor="#6cd8dc">
                         <tr class="table-primary">
-                           <th width="30%">ID</th>
+                           <th width="10%">ID</th>
                            <th width="50%">Descrição</th>  
-                           <th width="30%">Solução</th>
-                           <th width="30%">Data Lançamento</th>
+                           <th width="50%">Solução</th>
+                           <th width="50%">Data Lançamento</th>
+                           <th width="10%">Arquivo</th>
                            <th scope="col" width="5%">Edit</th>
                            <th scope="col" width="5%">Delete</th>
                         </tr>
@@ -65,6 +68,14 @@
                     <br />
                     <label>Solução</label>
                     <input type="text" name="students" id="students" class="form-control" />
+                    <br /> 
+                </div>
+                <div class="modal-body">
+                <label>Arquivo</label>
+                     <br />
+                     <form method="POST" action="upload.php" enctype="multipart/form-data">
+                    <input name="arquivo" type="file"><br><br>   
+                    </form>
                     <br /> 
                 </div>
                 <div class="modal-footer">

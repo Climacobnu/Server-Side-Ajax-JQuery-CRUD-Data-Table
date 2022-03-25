@@ -11,6 +11,7 @@ if(isset($_POST["operation"]))
 			array(
 				':course'	=>	$_POST["course"],
 				':students'	=>	$_POST["students"]
+				
 			)
 		);
 	}
@@ -23,6 +24,7 @@ if(isset($_POST["operation"]))
 			array(
 				':course'	=>	$_POST["course"],
 				':students'	=>	$_POST["students"],
+				
 				':id'			=>	$_POST["course_id"]
 			)
 		);

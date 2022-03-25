@@ -12,6 +12,7 @@ if(isset($_POST["search"]["value"]))
 	$query .= 'WHERE course LIKE "%'.$_POST["search"]["value"].'%" ';
 	$query .= 'OR students LIKE "%'.$_POST["search"]["value"].'%" ';
 	$query .= 'OR data_lancamento LIKE "%'.$_POST["search"]["value"].'%" ';
+	
 }
 
 if(isset($_POST["order"]))
@@ -37,13 +38,14 @@ foreach($result as $row)
 	$sub_array = array();
 	
 	// incluir campos no tabela array 
-	
+
 	$sub_array[] = $row["id"];
 	$sub_array[] = $row["course"];
 	$sub_array[] = $row["students"];
 	$sub_array[] = $row["data_lancamento"];
+	$sub_array[] = $row[" arquivo"];
 	$sub_array[] = '<button type="button" name="update" id="'.$row["id"].'" class="btn btn-primary btn-sm update"><i class="glyphicon glyphicon-pencil">&nbsp;</i>Edit</button></button>';
-	$sub_array[] = '<button type="button" name="delete" id="'.$row["id"].'" class="btn btn-danger btn-sm delete">Delete</button>';
+	$sub_array[] = '<button type="button" name="delete" id="'.$row["id"].'" class="btn btn-danger btn-sm delete"><i class="fa fa-trash">&nbsp;</i> Delete</button></button>';
 	$data[] = $sub_array;
 }
 $output = array(
